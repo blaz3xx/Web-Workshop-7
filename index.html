@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="uk">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>МУР — Практикум №7 (Flexbox)</title>
+    <link rel="stylesheet" href="css/styles.css"> 
+</head>
+<body>
+    <div class="container">
+
+        <div class="main-layout">
+            <div class="content-columns">
+                <div class="row-1-block1">
+                    <header class="block block1">
+                        <h2 class="blockX">Тобі мурую МУР Імперії</h2>
+                        <a href='https://www.instagram.com/myr_ukraine/'> <img src="pictures/mur logo1.jpg" alt="логотип МУР1"></a>
+                        <h2>МУР: Поезія в ритмі міста</h2>
+                        <a href='https://www.instagram.com/myr_ukraine/'> <img src="pictures/mur logo.jpg" alt="логотип МУР2"> </a>
+                    </header>
+                </div>
+                
+                <div class="row-2-3-content">
+                    <div class="column-left">
+                        <section class="block block3">
+                            <div class="content">
+                                <h2 style='text-align: center;'>Збережені Події</h2>
+                                <div id="results-output" style="margin-top: 10px;"></div>
+                                <ol>
+                                    <li>Київ - 20 вересня 2025</li>
+                                    <li>Львів - 27 вересня 2025</li>
+                                    <li>Харків - 4 жовтня 2025</li>
+                                    <li>Дніпро - 11 жовтня 2025</li>
+                                    <li>Одеса - 18 жовтня 2025</li>
+                                    <li>Вінниця - 25 жовтня 2025</li>
+                                    <li>Чернівці - 1 листопада 2025</li>
+                                    <li>Запоріжжя - 8 листопада 2025</li>
+                                    <li>Полтава - 15 листопада 2025</li>
+                                    <li>Івано-Франківськ - 22 листопада 2025</li>
+                                    <li>Тернопіль - 29 листопада 2025</li>
+                                    <li>Рівне - 6 грудня 2025</li>
+                                    <li>Луцьк - 13 грудня 2025</li>
+                                    <li>Київ - 20 грудня 2025</li>
+                                </ol>
+                            </div>
+                        </section>
+                    </div>
+                    
+                    <div class="column-center">
+                        <section class="block block4">
+                            <h2>«МУР для мене — це про відродження української культури та нації: у музиці, у слові, у спільному відчутті єдності.»</h2>
+                            <button id="play-btn">Play Animation</button>
+                        </section>
+                        
+                        <section class="block block5" role="main">
+                            <div id="work"> 
+                                <div id="controls">
+                                    <div id="messages"></div>
+                                    
+                                    <div id="animation-controls">
+                                        <button id="start-btn">Start</button>
+                                        <button id="stop-btn" style="display: none;">Stop</button>
+                                    </div>
+
+                                    <div id="right-controls">
+                                        <button id="reload-btn" style="display: none;">Reload</button>
+                                        <button id="close-btn">Close</button> 
+                                    </div>
+                                </div>
+                                <div id="anim">
+                                    <div id="green-circle"></div> 
+                                </div>
+                            </div>
+                            
+                            <div id="original-content" class="content">
+                                <img src="pictures/hurtmur.webp" alt="Фото гурту МУР">
+                                <h2>Основне про МУР</h2>
+                                <p>МУР — молодий український гурт, створений у 2022 році після початку повномасштабного вторгнення. До складу входять Микола Шмундір, Віктор Ткаченко та Олександр Хоменко. За два роки гурт встиг випустити два альбоми — <em>«MYR Vol.1»</em> та <em>«Захалявна книжка»</em>, засновані на текстах класиків української поезії.</p>
+
+                                <p>У 2024 році МУР презентував історичний альбом <em>«Ти [Романтика]»</em>, присвячений авторам Розстріляного відродження. До нього увійшли 17 композицій, що послідовно відтворюють події 1918–1937 років. У записі взяли участь Сергій Жадан, гурт «Хейтспіч», Женя Янович, NAZVA, Олена Кравець, Женя Дубовик та Сергій Мартинюк.</p>
+
+                                <p>Альбом порушує теми життя й долі Павла Тичини, Володимира Сосюри, Миколи Хвильового, Михайля Семенка, Леся Курбаса та багатьох інших. Основна мета — актуалізувати творчість поетів і письменників Розстріляного відродження для сучасного покоління та нагадати про циклічність історії.</p>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+            
+            <aside class="block block2">
+                <nav class="menu" aria-label="Головне меню">
+                    <h2>Меню</h2>
+                    <ul>
+                        <li><a href="index.html" aria-current="page">Головна</a></li>
+                        <li><a href="index_mobile.html">Вигляд сторінки для телефона</a></li>
+                        <li><a href="index_mail.html">Вигляд сторінки для пересилки mail</a></li>
+                    </ul>
+                </nav>
+            </aside>
+        </div>
+        
+        <footer class="block block6">
+            <div class="footer-inner">
+                <div class="photos">
+                    <a href='https://www.tiktok.com/@myr_ukraine?lang=uk-UA'> <img src="pictures/tiktok.jpg" alt="логотип TikTok"> </a>
+                    <a href='https://open.spotify.com/artist/3NYo9EP6S3ReZ3ep86lsg3'> <img src="pictures/spotify.png" alt="логотип Spotify"> </a>
+                    <a href='https://concert.ua/uk/talent/mur'> <img src="pictures/concertua.jpg" alt="логотип Concertua"> </a>
+                    <a href='https://www.youtube.com/channel/UCj9c2ZnE4zVSjV3HfGIszgQ'> <img src="pictures/new-youtube-logo-2017-vector-for-free-download-115739248166e5taxeswn.png" alt="логотип Youtube"> </a>
+                    <a href='https://uk.wikipedia.org/wiki/%D0%9C%D0%A3%D0%A0_(%D0%B3%D1%83%D1%80%D1%82)'> <img src="pictures/Wikipedia-logo-v2.svg.png" alt="логотип Wikipedia"> </a>
+                </div>
+            </div>
+            <h2 class="blockY">Без пам'яті про минуле не існує майбутнього</h2>
+        </footer>
+
+    </div>
+    <script src="js/script.js"></script> 
+</body>
+</html>

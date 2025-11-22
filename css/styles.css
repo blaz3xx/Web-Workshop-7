@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    min-height: 100vh;
+    font-size: clamp(16px, 1.5vw, 20px);
+    overflow: auto;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans", Arial, sans-serif;
+    color: #222;
+    background: #fafafa;
+    line-height: 1.6;
+}
+
+/* --- FLEXBOX СТРУКТУРА --- */
+.container { display: flex; flex-direction: column; min-height: 100vh; width: 100%; gap: 8px; padding: 8px; }
+.main-layout { display: flex; flex-grow: 1; gap: 8px; min-width: 0; }
+.content-columns { flex: 3.2 1 0; display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+.row-1-block1 { display: flex; gap: 8px; }
+.row-2-3-content { display: flex; flex-grow: 1; gap: 8px; min-width: 0; }
+.column-left { flex: 1.2 1 0; display: flex; flex-direction: column; min-width: 0; }
+.column-center { flex: 2 1 0; display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+
+/* --- БАЗОВІ СТИЛІ БЛОКІВ --- */
+.block {
+    display: flex; justify-content: center; align-items: center; border: 1px solid #bdbdbd;
+    background: white; position: relative; overflow: visible; overflow-wrap: break-word;
+    hyphens: auto; min-height: 100px; border-radius: 10px; padding: 12px;
+}
+.block1 { flex-grow: 1; background-color: #c9ddf2; min-height: 180px; display: flex; align-items: center; justify-content: flex-start; gap: 12px; padding-left: 16px; }
+.block2 { flex: 1 1 0; min-width: 0; background-color: #e3efd9; }
+.block3 { background-color: #fbe3d1; align-items: flex-start; flex-grow: 1; flex-direction: column; }
+.block4 { background-color: #fbe3d1; align-items: center; flex-direction: column; }
+.block5 { display: block; background-color: #ffffff; align-items: flex-start; flex-grow: 1; padding: 0; }
+.block6 { flex-grow: 0; background-color: #c9ddf2; min-height: 180px; display: flex; justify-content: flex-start; align-items: center; gap: 12px; }
+
+/* --- СТИЛІ АНІМАЦІЇ (ВАРІАНТ 11) --- */
+#work {
+    width: 100%;
+    height: 100%;
+    position: relative; 
+    overflow: hidden; 
+}
+
+#anim {
+    width: calc(100% - 10px); 
+    height: calc(100% - 50px);
+    border: 5px solid orange; /* Оранжева рамка */
+    position: absolute;
+    bottom: 0; 
+    left: 5px; 
+    background-image: url('texture.png'); 
+    background-size: 32px 32px;
+    overflow: hidden; 
+}
+
+/* Область керування controls - СВІТЛА ТЕМА */
+#controls {
+    width: 100%;
+    height: 50px; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    background-color: #f4f4f4; /* Світло-сірий фон */
+    color: #333; /* Темний текст */
+    border-bottom: 1px solid #ddd; /* Легка рамка знизу */
+    padding: 0 10px;
+}
+
+#messages {
+    order: 1; 
+    flex-grow: 1; 
+    text-align: left; 
+    font-family: monospace;
+    font-size: 0.9em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-right: 10px;
+    color: #000; /* Чорний текст повідомлень */
+}
+
+#animation-controls {
+    order: 2; 
+    display: flex;
+    gap: 5px; 
+}
+
+#right-controls {
+    order: 3; 
+    display: flex;
+    gap: 5px;
+}
+
+/* Стилі кнопок для світлої теми */
+#controls button {
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff; /* Білий фон */
+    color: #333; /* Темний текст */
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: background-color 0.2s;
+}
+
+#controls button:hover {
+    background-color: #e0e0e0; /* Світло-сірий при наведенні */
+    border-color: #aaa;
+}
+
+#green-circle {
+    border-radius: 50%;
+    background-color: green; 
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+/* Логіка приховування/показу */
+.block5 #original-content { display: block; padding: 12px; }
+.block5 #work { display: none; }
+.block5.active #original-content { display: none; }
+.block5.active #work { display: flex !important; flex-direction: column; }
+
+
+/* --- ІНШІ СТИЛІ --- */
+.block4 h2 { font-size: clamp(18px, 2vw, 24px); margin: .25rem 0 .5rem; text-align: center; }
+.content { width: 100%; max-width: 900px; margin: 0 auto; }
+.content ol {
+    margin-left: 3.5rem; 
+}
+.results-table { width: 100%; border-collapse: collapse; margin-top: 15px; font-size: 0.8em; }
+.results-table th, .results-table td { border: 1px solid #ddd; padding: 4px; text-align: left; vertical-align: top; }
+.results-table th { background-color: #f2f2f2; }
+.block5 img { float: right; margin: 0 0 6px 12px; height: 200px; width: auto; border-radius: 8px; border: 1px solid #ddd; }
+.block1 img { height: 120px; width: auto; border-radius: 8px; border: 1px solid #ddd; }
+.block6 img { height: 70px; width: auto; border-radius: 8px; border: 1px solid #ddd; }
+.blockX, .blockY { padding: 0 1em; margin: 1em; width: fit-content; align-content: center; background-color: white; border: 1px solid black; }
+.blockY { margin-left: auto; }
+.blockX { margin-right: auto; }
+.menu h2 {text-align: center; font-size: 30px; margin-bottom: .5rem; }
+.menu ul { list-style: none; display: flex; flex-direction: column; gap: .35rem; }
+.menu a { display: block; text-decoration: none; color: #1f2937; background: #fff; padding: .5rem .75rem; border: 1px solid #cfd8dc; border-radius: 8px; }
+@media (max-width: 1300px) {
+    .container { gap: 6px; padding: 6px; }
+    .block { padding: 10px; }
+}
