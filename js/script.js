@@ -334,7 +334,6 @@ async function displayResults() {
                                     ? `Крок/Зміщення. Розмір: ${event.size}px.` 
                                     : event.message;
 
-                                // !!! ВИПРАВЛЕНО: Виводимо РЕАЛЬНИЙ ID з сервера (event.id), а не лічильник !!!
                                 tableHTML += `<li>[ID ${event.id}] ${formattedTime} - ${description}</li>`;
                             });
     tableHTML += `</ol></td>
